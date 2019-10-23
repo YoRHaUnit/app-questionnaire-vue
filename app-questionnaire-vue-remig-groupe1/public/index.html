@@ -6,12 +6,64 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>app-questionnaire-vue-remig-groupe1</title>
+    <style>
+    [v-cloak] {
+      display: none;
+    }</style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but app-questionnaire-vue-remig-groupe1 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
+
+    <h1>Home</h1>
+    <div id="main">
+        <form action="./question1.html" method="get" class="form-example" @submit="addItem">
+      <div class="form-example">
+        <label for="first_name">Votre prénom : </label>
+        <input type="text" name="first_name" id="first_name" v-model="first_name" required>
+      </div><br>
+      <div class="form-example">
+        <label for="last_name">Votre nom : </label>
+        <input type="text" name="last_name" id="last_name" v-model="last_name" required>
+      </div><br>
+      <div class="form-example">
+        <label for="company">Votre société : </label>
+        <input type="text" name="company" id="company" v-model="email" required>
+      </div><br>
+      <div class="form-example">
+        <input type="submit" value="Valider">
+      </div>
+    </form>
+    <div v-cloak>
+      {{employee}}
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#main',
+      data: {
+        employee: [],
+        first_name: null,
+        last_name: null,
+        email: null
+      },
+      methods:{
+        addItem: function(){
+          var info = {
+            first_name : this.first_name,
+            last_name : this.last_name,
+            email : this.email
+          };
+          this.employee.push(info);
+          // router.push({path: 'question1', params:{employee}})
+          return employee;
+        },
+      }
+    })
+  </script>
   </body>
-</html>
+  </html>

@@ -1,0 +1,1 @@
+Formulaire fait, données récupérées dans une variable que je parviens a afficher. Reste a savoir comment passer cette donnée à la page d'apres

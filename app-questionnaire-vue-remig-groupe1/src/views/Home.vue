@@ -34,6 +34,7 @@ export default {
   methods: {
     submitHandler (event) {
       event.preventDefault()
+      user.rows.push()
       this.$router.push(`/questions/${this.first_name}/${this.last_name}/${this.society}/${this.question}`)
     }
   }

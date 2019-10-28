@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "question 1",
+    "name": "Question 1",
     "question": "Comment allez-vous ?",
     "reponses": {
       "reponse1": {
@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "name": "question 2",
+    "name": "Question 2",
     "question": "Quel jour sommes-nous ?",
     "reponses": {
       "reponse1": {
@@ -39,7 +39,7 @@
   },
   {
     "id": 3,
-    "name": "question 3",
+    "name": "Question 3",
     "question": "Quel age avez-vous ?",
     "reponses": {
       "reponse1": {
@@ -53,6 +53,101 @@
       "reponse3": {
         "libelle" : "Et vous ?",
         "score" : 100
+      }
+    }
+  },
+  {
+    "id": 4,
+    "name": "Question 4",
+    "question": "Fait-il beau ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Je sais pas les volets sont fermés",
+        "score" : -100
+      },
+      "reponse2": {
+        "libelle" : "Il fait encore nuit",
+        "score" : -20
+      },
+      "reponse3": {
+        "libelle" : "Ca dépend d'où on est",
+        "score" : 100
+      }
+    }
+  },
+  {
+    "id": 5,
+    "name": "Question 5",
+    "question": "Combien de trou a une paille ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "1",
+        "score" : -50
+      },
+      "reponse2": {
+        "libelle" : "2",
+        "score" : -50
+      },
+      "reponse3": {
+        "libelle" : "C'est relatif au point de vue",
+        "score" : 100
+      }
+    }
+  },
+  {
+    "id": 6,
+    "name": "Question 6",
+    "question": "Qu'est-ce que la catharsis",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Purification de l'esprit",
+        "score" : 300
+      },
+      "reponse2": {
+        "libelle" : "Un poisson",
+        "score" : -50
+      },
+      "reponse3": {
+        "libelle" : "Un synonyme de \"abnégation\"",
+        "score" : -50
+      }
+    }
+  },
+  {
+    "id": 7,
+    "name": "Question 7",
+    "question": "Quand est né Axel ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Le 11 septembre",
+        "score" : 50
+      },
+      "reponse2": {
+        "libelle" : "Le 14 juillet",
+        "score" : -10
+      },
+      "reponse3": {
+        "libelle" : "Le premier novembre",
+        "score" : -10
+      }
+    }
+  },
+  {
+    "id": 8,
+    "name": "Question 8",
+    "question": "Quel est le meilleur personnage de World Of Warcraft ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Anduin",
+        "score" : -1000
+      },
+      "reponse2": {
+        "libelle" : "Garrosh",
+        "score" : -50
+      },
+      "reponse3": {
+        "libelle" : "Sylvanas",
+        "score" : 500
       }
     }
   }

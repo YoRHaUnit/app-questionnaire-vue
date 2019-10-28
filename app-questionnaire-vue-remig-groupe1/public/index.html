@@ -17,30 +17,9 @@
     </noscript>
     <div id="app"></div>
 
-    <h1>Home</h1>
-    <div id="main">
-        <form action="./question1.html" method="get" class="form-example" @submit="addItem">
-      <div class="form-example">
-        <label for="first_name">Votre prénom : </label>
-        <input type="text" name="first_name" id="first_name" v-model="first_name" required>
-      </div><br>
-      <div class="form-example">
-        <label for="last_name">Votre nom : </label>
-        <input type="text" name="last_name" id="last_name" v-model="last_name" required>
-      </div><br>
-      <div class="form-example">
-        <label for="company">Votre société : </label>
-        <input type="text" name="company" id="company" v-model="email" required>
-      </div><br>
-      <div class="form-example">
-        <input type="submit" value="Valider">
-      </div>
-    </form>
-    <div v-cloak>
-      {{employee}}
-    </div>
-  </div>
-
+  <script src="//cdn.jsdelivr.net/npm/pouchdb@7.1.1/dist/pouchdb.min.js"></script>
+  <script src="js/base.js"></script>
+  <script src="js/app.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
   <script>
     var app = new Vue({
@@ -65,5 +44,5 @@
       }
     })
   </script>
-  </body>
-  </html>
+</body>
+</html>

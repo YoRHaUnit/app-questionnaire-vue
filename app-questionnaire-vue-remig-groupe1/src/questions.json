@@ -1,0 +1,59 @@
+[
+  {
+    "id": 1,
+    "name": "question 1",
+    "question": "Comment allez-vous ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Bien",
+        "score" : 100
+      },
+      "reponse2": {
+        "libelle" : "Mal",
+        "score" : 0
+      },
+      "reponse3": {
+        "libelle" : "Super bien",
+        "score" : -20
+      }
+    }
+  },
+  {
+    "id": 2,
+    "name": "question 2",
+    "question": "Quel jour sommes-nous ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "Lundi",
+        "score" : 0
+      },
+      "reponse2": {
+        "libelle" : "Aujourd'hui",
+        "score" : 50
+      },
+      "reponse3": {
+        "libelle" : "42",
+        "score" : 100
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "question 3",
+    "question": "Quel age avez-vous ?",
+    "reponses": {
+      "reponse1": {
+        "libelle" : "19",
+        "score" : 1
+      },
+      "reponse2": {
+        "libelle" : "L'age de répondre a ce questionnaire",
+        "score" : -20
+      },
+      "reponse3": {
+        "libelle" : "Et vous ?",
+        "score" : 100
+      }
+    }
+  }
+]

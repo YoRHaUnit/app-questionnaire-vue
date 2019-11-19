@@ -1,1 +1,5 @@
-2019/10/28-09:16:31.677 2718 Delete type=3 #1
+2019/10/28-17:48:01.919 b1c Recovering log #3
+2019/10/28-17:48:01.919 b1c Level-0 table #5: started
+2019/10/28-17:48:01.922 b1c Level-0 table #5: 960 bytes OK
+2019/10/28-17:48:01.931 b1c Delete type=0 #3
+2019/10/28-17:48:01.931 b1c Delete type=3 #2

@@ -11,7 +11,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/questions/:firstname/:lastname/:society/:question',
+    path: '/questionnaire/:firstname/:lastname/:society/:question',
     name: 'questions',
     component: () => import(/* webpackChunkName: "about" */ '../views/Questionnaire.vue'),
     props: true

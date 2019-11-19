@@ -171,6 +171,9 @@
   </div>
 </template>
 <script>
+// import DataBaseConnection from '../components/DataBaseConnection'
+// import Datetime from 'vue-datetime'
+
 export default {
   name: 'Home',
   data () {
@@ -185,7 +188,7 @@ export default {
     submitHandler (event) {
       event.preventDefault()
       // score = score +
-      this.$router.push(`/questions/${this.first_name}/${this.last_name}/${this.society}/${this.question}`)
+      this.$router.push(`/questionnaire/${this.first_name}/${this.last_name}/${this.society}/${this.question}`)
     }
   }
 }

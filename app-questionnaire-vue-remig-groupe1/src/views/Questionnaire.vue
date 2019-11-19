@@ -33,8 +33,10 @@
 <script src="pouchdb-7.1.1.min.js"></script>
 <script>
 import json from '../questions'
+import PouchDB from 'pouchdb'
+import moment from 'moment'
 export default {
-  name: 'Questionnaire',
+  name: 'questionnaire',
   props: {
     firstname: String,
     lastname: String,
@@ -70,14 +72,25 @@ export default {
         console.log(item)
       }
       if (this.nbQuestions > parseInt(this.question)) {
-        this.$router.push(`/questions/${this.firstname}/${this.lastname}/${this.society}/${parseInt(this.question)}`)
+        this.$router.push(`/questionnaire/${this.firstname}/${this.lastname}/${this.society}/${parseInt(this.question)}`)
       } else {
         const scoreTotalQuestionnaire = {
           score: this.scoreTotal
         }
         window.localStorage.setItem('leScore', JSON.stringify(scoreTotalQuestionnaire))
+        this.addDb()
         this.$router.push({ path: `/resultats/${this.firstname}/${this.lastname}/${this.society}/${parseInt(this.question)}`, params: this.scoreTotal })
       }
+    },
+    addDb(){
+      var db = new PouchDB('questionnaire')
+      db.put({
+        _id: this.first_name + moment(String()).format('MM/DD/YYYY hh:mm'),
+        nom: this.first_name,
+        prenom: this.last_name,
+        nomSociete: this.society
+      })
+      db.replicate.to('http://127.0.0.1:8001/questionnaire')
     }
   }
 }

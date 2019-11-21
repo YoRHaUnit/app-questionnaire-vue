@@ -146,7 +146,11 @@
 </style>
 <template class="all">
   <div class="container">
-    <form class="form-example" @submit="submitHandler" id="contact">
+    <div class="form-example" id="contact">
+    <!-- Veillez a bien lire le README.txt pour être sûr de commencer la lecture du code au bon endroit -->
+    <!-- Formulaire : la méthode submiteHandler() est appelée lors de l'envoi. Les valeurs des champs sont envoyées via l'URL (c'est un peu sale mais la découverte -->
+    <!-- des variables sessions s'est faite tardivement. Elle seront utilisées plus tard dans le code pour la gestion du score -->
+    <form class="" @submit="submitHandler" id="">
       <h1>Questionnaire Vue.js</h1><br>
       <div class="form-example">
         <input type="text" class="champ" name="first_name" id="first_name" v-model="first_name" required placeholder="Votre Prénom">
@@ -164,10 +168,13 @@
       <div class="button-example" >
         <button type="submit" value="Valider" id="contact-submit">Valider</button>
         <br>
-        <a href="/admin" class="copyright">Page d'administration</a><br>
       </div>
-      <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
     </form>
+    <form @submit="adminHandler">
+      <button type="submit" value="Valider" style="background-color: #F9F9F9; text-decoration: none; border-color: #F9F9F9; color: black; width: auto; height: auto;">Page d'administration</button>
+    </form>
+    <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a></p>
+    </div>
   </div>
 </template>
 <script>
@@ -177,18 +184,26 @@
 export default {
   name: 'Home',
   data () {
+    // Initilisation des variables du formulaire qui seront à la fin du questionnaire, insérées dans pouchDB
     return {
       first_name: null,
       last_name: null,
       society: null,
+      // Compteur des questions. Initialisé à 0 car le nombre de questions sera obtenu à la lecture du fichier question.json. A chaque nouvelle question, le compteur = compteur + 1
+      // Lorsque le compteur atteint le nombre de questions présentes dans le fichier json, nous sommes redirigés à la page Resultats.vue.
       question: '0'
     }
   },
   methods: {
     submitHandler (event) {
       event.preventDefault()
-      // score = score +
+      // redirection vers la page correspondante à la route suivante. (Voir le fichier index.js du package router)
       this.$router.push(`/questionnaire/${this.first_name}/${this.last_name}/${this.society}/${this.question}`)
+    },
+    adminHandler (event) {
+      event.preventDefault()
+      // redirection vers la page correspondante à la route suivante. (Voir le fichier index.js du package router)
+      this.$router.push(`/admin/`)
     }
   }
 }
